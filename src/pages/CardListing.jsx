@@ -7,7 +7,7 @@ const CardListing = ({searchTerm}) => {
 
   console.log(searchTerm)
   const [eventFilter, setEventFilter] = useState("Both")
-    const {data, loading, error} = useFetch("http://localhost:3000/eventmodels", { data: [] })
+    const {data, loading, error} = useFetch("https://bi-assignment1-be.onrender.com/eventmodels", { data: [] })
     console.log(data)
 
     const filterValue = eventFilter === "Both" ? data.data : data?.data?.filter((item) => item.eventType === eventFilter)

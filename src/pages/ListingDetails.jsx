@@ -3,7 +3,7 @@ import useFetch from "../useFetch"
 
 
 const ListingDetails = () => {
-    const {data, loading, error} = useFetch("http://localhost:3000/eventmodels", { data: [] })
+    const {data, loading, error} = useFetch("https://bi-assignment1-be.onrender.com/eventmodels", { data: [] })
     console.log("printData:", data)
     const id = useParams()
     console.log(id)
@@ -21,7 +21,6 @@ const ListingDetails = () => {
                     <h2>{dataFetch.title}</h2>
                     <p>Hosted By:</p>
                     <p><strong>{dataFetch.hostedBy}</strong></p>
-
                      <div>
               <img src={dataFetch.image} className="" alt="..."/>
                  <div className="card-body">
