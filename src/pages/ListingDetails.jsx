@@ -8,16 +8,15 @@ const ListingDetails = () => {
     const {id} = useParams()
     // console.log(id)
 
-    const dataFetch = data?.data?.find((findData) => findData._id === id.id)
+    const dataFetch = data?.data?.find((findData) => findData._id === id)
     console.log("dataFetch:", dataFetch)
     return(
         <>
         <div className="container mt-4">
             {loading && <p>Loading...</p>}
             {error && <p>Error while fetching data</p>}
-            if(!dataFetch){
-              <p>No event found</p>
-            } 
+            if(!dataFetch) return <p>No event found</p>
+  
 
                <div className="row">
                 <div className="col-md-7">
