@@ -8,7 +8,7 @@ const ListingDetails = () => {
     const {id} = useParams()
     // console.log(id)
 
-    const dataFetch = data?.data?.find((findData) => findData._id == id.id)
+    const dataFetch = data?.data?.find((findData) => findData._id === id.id)
     console.log("dataFetch:", dataFetch)
     return(
         <>
