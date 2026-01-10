@@ -5,8 +5,8 @@ import useFetch from "../useFetch"
 const ListingDetails = () => {
     const {data, loading, error} = useFetch("https://bi-assignment1-be.onrender.com/eventmodels", { data: [] })
     console.log("printData:", data)
-    const id = useParams()
-    console.log(id)
+    const {id} = useParams()
+    // console.log(id)
 
     const dataFetch = data?.data?.find((findData) => findData._id == id.id)
     console.log("dataFetch:", dataFetch)
@@ -15,6 +15,9 @@ const ListingDetails = () => {
         <div className="container mt-4">
             {loading && <p>Loading...</p>}
             {error && <p>Error while fetching data</p>}
+            if(!dataFetch){
+              <p>No event found</p>
+            } 
 
                <div className="row">
                 <div className="col-md-7">
@@ -27,11 +30,11 @@ const ListingDetails = () => {
              <h4 className="card-title py-2">Details:</h4>
              <p>{dataFetch.description}</p>
              <h4>Additional Information:</h4>
-             <p><strong>Dress Code:</strong> {dataFetch.additionalInformation.dressCode}</p>
+             <p><strong>Dress Code:</strong> {dataFetch.additionalInformation?.dressCode}</p>
              <p><strong>Age Restrictions:</strong> {dataFetch.additionalInformation.ageRestrictions} </p>
              <div>
              <h4>Event Tags:</h4>
-             {dataFetch.tags.map((tag, index) => (
+             {dataFetch.tags?.map((tag, index) => (
             <span
              key={index}className="badge bg-danger me-2 px-3 py-2 mt-2" >
                {tag}
