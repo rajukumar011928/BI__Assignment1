@@ -10,7 +10,7 @@ export default function App(){
     <>
     <Header setSearchTerm={setSearchTerm}/>  
     <CardListing searchTerm={searchTerm}/>
-    <ListingDetails searchTerm={searchTerm}/> 
+    <ListingDetails/> 
     </>
   )
 }
