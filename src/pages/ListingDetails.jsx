@@ -76,7 +76,7 @@ const ListingDetails = () => {
                                 
                                 </div>
                             ))}
-                            <span className="badge bg-danger me-2 px-3 py-2 mt-4">RSVP</span>
+                            
                                     
                           
                     </div>
