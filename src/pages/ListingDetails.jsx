@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import useFetch from "../useFetch"
+import Header from "../components/Header"
 
 
 const ListingDetails = () => {
@@ -13,6 +14,7 @@ const ListingDetails = () => {
     return(
       
         <>
+        <Header/>
         
          <div className="container mt-4">
             {loading && <p>Loading...</p>}
