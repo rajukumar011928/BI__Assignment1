@@ -11,7 +11,7 @@ const ListingDetails = ({searchTerm}) => {
     const dataFetch = data?.data?.find((findData) => findData._id === id)
     console.log("dataFetch:", dataFetch)
 
-    const seachFilter = dataFetch?.filter((searchData) => searchData.title === searchTerm || searchData.tags === searchTerm)
+    const seachFilter = dataFetch?.filter((searchData) => searchData.title == searchTerm || searchData.tags == searchTerm)
     return(
       
         <>
