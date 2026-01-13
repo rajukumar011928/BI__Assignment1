@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import useFetch from "../useFetch"
-import Header from "../components/Header"
+
+
 
 
 const ListingDetails = () => {
@@ -14,7 +15,6 @@ const ListingDetails = () => {
     return(
       
         <>
-        <Header/>
         
          <div className="container mt-4">
             {loading && <p>Loading...</p>}
@@ -67,7 +67,7 @@ const ListingDetails = () => {
                           <div className="row">
                             {dataFetch?.speakers?.map((speaker) => (
                                 <div className="col" key={speaker._id}>
-                                    <div className="card">
+                                    <div className="card" style={{width: "13rem", height: "17rem"}}>
                                 <img src={speaker?.image} className="rounded-circle" width="80"height="80" alt="error"/>
                                                                                   
                                 <h5 className="card-text mt-2">{speaker?.name}</h5>

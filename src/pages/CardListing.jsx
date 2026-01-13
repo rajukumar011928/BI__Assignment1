@@ -2,10 +2,12 @@ import useFetch from "../useFetch"
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Link } from "react-router-dom"
 import { useState } from "react"
+import { useOutletContext } from "react-router-dom"
 
-const CardListing = ({searchTerm}) => {
+const CardListing = () => {
 
-  console.log(searchTerm)
+  const {searchTerm } = useOutletContext()
+
   const [eventFilter, setEventFilter] = useState("Both")
     const {data, loading, error} = useFetch("https://bi-assignment1-be.onrender.com/eventmodels", { data: [] })
     console.log(data)
@@ -44,7 +46,7 @@ const CardListing = ({searchTerm}) => {
         {searchFilter?.map((post) => (
            
             <div className="col-md-4 col-sm-6" key={post._id}>
-            <div className="card">
+            <div className="card h-100">
             <img src={post.image} className="card-img-top img-fluid rounded"  alt="error"/>
             <div className="card-body">
             <small className="card-text">{post.date} . {post.startTime}</small>

@@ -9,15 +9,19 @@ import ListingDetails from "./pages/ListingDetails.jsx"
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>
-  },
-  {
-    path: "/cardlisting",
+    element: <App/>,
+   
+    children: [
+       {
+    path: "/",
     element: <CardListing/>
   },
   {
     path: "/cardlisting/:id",
     element: <ListingDetails/>
+  }
+    ]
+  
   }
   
 ])
