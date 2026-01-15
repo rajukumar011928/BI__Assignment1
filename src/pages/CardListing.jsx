@@ -46,7 +46,7 @@ const CardListing = () => {
         {searchFilter?.map((post) => (
            
             <div className="col-md-4 col-sm-6" key={post._id}>
-            <div className="card h-100">
+            <div className="card h-100 w-100">
             <img src={post.image} className="card-img-top img-fluid rounded"  alt="error"/>
             <div className="card-body">
             <small className="card-text">{post.date} . {post.startTime}</small>
