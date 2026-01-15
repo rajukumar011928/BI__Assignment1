@@ -14,7 +14,7 @@ const Header = ({ setSearchTerm }) => {
     return(
         <div>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
-  <div className="container-fluid py-2">
+  <div className="container-fluid d-flex flex-nowrap align-items-cente">
     <NavLink to="/" className="navbar-brand">𝓜𝓮𝓮𝓽𝓾𝓹</NavLink>
     <div className="d-flex" role="search">
       <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" 
