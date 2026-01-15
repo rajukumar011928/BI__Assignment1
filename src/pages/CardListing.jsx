@@ -27,11 +27,11 @@ const CardListing = () => {
     return(
     <>
     
-    <div className="container py-4">
+    <div className="container-fluid py-4">
         
         
-        <div className="d-flex justify-content-end">
-          <h1 style={{ paddingRight: "130px" }}>Meetup Events</h1>
+        <div className="d-flex justify-content-between align-items-center">
+          <h1>Meetup Events</h1>
 
         <select className="form-control w-25 mb-3" onChange={(event) => setEventFilter(event.target.value)}>
           <option value="Both">Select Both</option>
@@ -42,7 +42,7 @@ const CardListing = () => {
        
         {loading && <p>Loading...</p>}
         {error && <p>An error occurs while fetching the data.</p>}
-         <div className="row g-4">
+         <div className="row g-4 justify-content-center">
         {searchFilter?.map((post) => (
            
             <div className="col-md-4 col-sm-6" key={post._id}>
