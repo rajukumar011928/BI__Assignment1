@@ -13,7 +13,7 @@ const Header = ({ setSearchTerm }) => {
   }
     return(
         <div>
-            <nav className="navbar bg-body-tertiary">
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid py-2">
     <NavLink to="/" className="navbar-brand">𝓜𝓮𝓮𝓽𝓾𝓹</NavLink>
     <div className="d-flex" role="search">
