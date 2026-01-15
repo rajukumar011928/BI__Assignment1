@@ -45,7 +45,11 @@ const CardListing = () => {
          <div className="row g-4 justify-content-center">
         {searchFilter?.map((post) => (
            
-            <div className="col-md-4 col-sm-6" key={post._id}>
+            <div className={
+        searchFilter.length === 1
+          ? "col-12"
+          : "col-md-4 col-sm-6"
+      } key={post._id}>
             <div className="card h-100 w-100">
             <img src={post.image} className="card-img-top img-fluid rounded"  alt="error"/>
             <div className="card-body">
